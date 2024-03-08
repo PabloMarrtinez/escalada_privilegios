@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  file_upload:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./resources/script.sh:/root/script.sh
+      - ./page:/var/www/html
+    environment:
+      DEBIAN_FRONTEND: noninteractive
